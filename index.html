@@ -6,14 +6,7 @@
     <script src="https://fb.me/react-15.0.0.js"></script>
     <script src="https://fb.me/react-dom-15.0.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-    <style>
-      #container {
-        padding: 50px;
-        background-color: yellow;
-        border: 2px solid black;
-      }
-
-    </style>
+   
   </head>
 
   <body>
@@ -24,7 +17,8 @@
         render(){
           var letterStyle = {
             padding: 20,
-            color: "blue"
+            color: "blue",
+            backgroundColor: this.props.bgcolor
           };
           return(
             <div style={letterStyle}>
@@ -35,7 +29,7 @@
       };
 
     
-      ReactDOM.render(<div><Letter>H</Letter><Letter>B</Letter></div>,document.getElementById('container'));
+      ReactDOM.render(<div><Letter bgcolor="green">H</Letter><Letter>B</Letter></div>,document.getElementById('container'));
     </script>
 
   </body>
