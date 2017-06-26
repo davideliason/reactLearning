@@ -12,26 +12,40 @@
   <body>
     <div id="container"></div>
 
+
     <script type="text/babel">
-      class Letter extends React.Component{
+
+      class Card extends React.Component {
         render(){
-          var letterStyle = {
-            padding: 20,
-            margin: 50,
-            display: "inline-block",
-            color: "blue",
-            backgroundColor: this.props.bgcolor
-          };
-          return(
-            <div style={letterStyle}>
-                <h3>{this.props.children}</h3>
-            </div>     
+           return (
+               <div>
+
+               </div>
+            );
+        }
+      };
+
+      class Square extends React.Component {
+        render(){
+          return (
+              <div>
+
+              </div>
+            );
+        }
+      };
+
+      class Label extends React.Component {
+        render(){
+          return (
+            <div>
+
+            </div>
           );
         }
       };
 
-    
-      ReactDOM.render(<div><Letter bgcolor="green">H</Letter><Letter bgcolor="yellow">B</Letter></div>,document.getElementById('container'));
+      ReactDOM.render(<Card></Card>, document.querySelector('#container'));
     </script>
 
   </body>
