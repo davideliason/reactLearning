@@ -12,6 +12,11 @@
         background-color: yellow;
         border: 2px solid black;
       }
+
+      div div div {
+        padding: 5px;
+        color: blue;
+      }
     </style>
   </head>
 
@@ -22,7 +27,9 @@
       class Letter extends React.Component{
         render(){
           return(
-            <h3>{this.props.children}</h3>
+            <div>
+                <h3>{this.props.children}</h3>
+            </div>     
           );
         }
       };
