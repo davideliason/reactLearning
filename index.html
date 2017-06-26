@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My First React Example</title>
+    <title>React Learning</title>
     <style>
-    h1 {
-      color: blue;
-    }
+      button {
+        border-color: yellow;
+      }
     </style>
   </head>
   <body>
@@ -16,6 +16,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <script type="text/babel">
+
+        class Buttonify extends React.Component{
+        render(){
+          return (
+              <div>
+                  <button type={this.props.behavior}>{this.props.children}</button>
+              </div>
+          );
+          }
+        }
        
         ReactDOM.render(<div><Buttonify behavior="Submit">Send Data</Buttonify></div>,document.querySelector('#container'))
 
