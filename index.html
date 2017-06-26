@@ -12,11 +12,11 @@
         background-color: yellow;
         border: 2px solid black;
       }
-
-      div div div {
-        padding: 5px;
+      .letter {
         color: blue;
       }
+
+
     </style>
   </head>
 
@@ -28,7 +28,7 @@
         render(){
           return(
             <div>
-                <h3>{this.props.children}</h3>
+                <h3 className="letter">{this.props.children}</h3>
             </div>     
           );
         }
