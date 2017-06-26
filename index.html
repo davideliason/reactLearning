@@ -12,10 +12,6 @@
         background-color: yellow;
         border: 2px solid black;
       }
-      .letter {
-        color: blue;
-      }
-
 
     </style>
   </head>
@@ -26,9 +22,13 @@
     <script type="text/babel">
       class Letter extends React.Component{
         render(){
+          var letterStyle = {
+            padding: 20,
+            color: "blue"
+          };
           return(
-            <div>
-                <h3 className="letter">{this.props.children}</h3>
+            <div style={letterStyle}>
+                <h3>{this.props.children}</h3>
             </div>     
           );
         }
