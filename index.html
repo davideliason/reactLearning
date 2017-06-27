@@ -42,12 +42,17 @@
 
 
         function showCircle(){
+
           var colors = ["blue","green","red","orange"];
-          var ranNum = Math.floor(Math.random() * colors.length);
+          for(var i = 0; i < colors.length; i++){
+             var color = colors[i];
+             console.log("color" + color)
+             circles.push(<Circle key = {i + color} bgColor = {color} />); 
+          }
 
-          circles.push(<Circle bgColor = {colors[ranNum]} />); 
+          var ranNum = Math.floor(Math.random() * circles.length);
 
-          return circles[0];
+          return circles[ranNum];
         };
 
 
