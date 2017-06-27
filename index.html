@@ -18,7 +18,22 @@
        constructor(props){
          super(props);
          this.state = {number : 0}
+
        };
+     
+       componentDidMount(){
+          setInterval(() => this.tick(),1000);
+       }
+
+       componentWillUnmount() {
+          clearInterval(this.timerID);
+       }
+
+        tick(){
+         this.setState({
+           number: this.state.number + 100
+         });
+       }
 
        render(){
           
