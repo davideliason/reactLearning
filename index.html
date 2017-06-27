@@ -24,9 +24,36 @@
           radius: 20
         };
 
+        var divStyle = {
+          width: 200,
+          padding: 50,
+          textAlign: "center"
+        };
+
+        var textStyles = {
+           emphasis : {
+              color: "red",
+              fontSize: 20,
+              ...commonStyles
+           },
+           subtle : {
+              color: "green",
+              fontSize: 10,
+              ...commonStyles
+           }
+        };
+
+        var commonStyles = {
+           margin: 0,
+           padding: 0
+        };
+
          return(
-            <div>
-                <p style={libraryStyle} >{this.props.title}</p>
+            <div style={libraryStyle}>
+               <div style={divStyle} >
+                <p style={textStyles.emphasis} >{this.props.title}</p>
+                <p style={textStyles.subtle }>Books</p>
+               </div>
             </div>
          );
       }
