@@ -26,7 +26,7 @@
        }
 
        componentWillUnmount() {
-          clearInterval(this.timerID);
+
        }
 
         tick(){
@@ -36,11 +36,14 @@
        }
 
        render(){
-          
+          var coffeeCounterStyle = {
+            backgroundColor : "blue"
+          };
+
        return(
          <div>
-            <p>hello world</p>
-            <p># {this.state.number}</p>
+            <p >hello world</p>
+            <p style={coffeeCounterStyle} ># {this.state.number}</p>
          </div>
         );
        }
@@ -48,21 +51,32 @@
 
     class CoffeeCounterDisplay extends React.Component {
        render(){
+          var commonStyle = {
+            margin: 0,
+            padding: 0
+          };
+
           var coffeeCounterStyle = {
             backgroundColor: "yellow",
-            width: 100,
+            marginLeft: 50,
+            width: 200,
             height: 200,
-            WebkitFilter: "opacity(30%)",
-            filter: "opacity(30%)",
-            textAlign: "center",
-            marginLeft: 200,
-            marginTop: "10%",
-            padding: 20,
-            borderRadius: 10
+            borderRadius: 10,
+            border: "2px solid black"
           };
+
+          var divStyle = {
+            width: 100,
+            textAlign: "center",
+            backgroundColor: "green",
+            color: "white",
+            marginLeft: "40px"
+          }
        return(
          <div style={coffeeCounterStyle} >
-            <CoffeeCounter />
+            <div style={divStyle}>
+              <CoffeeCounter />
+            </div>
          </div>
         );
       };
