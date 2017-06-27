@@ -15,11 +15,17 @@
     <script type="text/babel">
 
     class CoffeeCounter extends React.Component {
-       render(){
+       constructor(props){
+         super(props);
+         this.state = {number : 0}
+       };
 
+       render(){
+          
        return(
          <div>
             <p>hello world</p>
+            <p># {this.state.number}</p>
          </div>
         );
        }
