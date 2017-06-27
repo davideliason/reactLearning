@@ -38,12 +38,20 @@
           }
         };
 
+        var circles = [];
+
+
         function showCircle(){
           var colors = ["blue","green","red","orange"];
           var ranNum = Math.floor(Math.random() * colors.length);
 
-          return <Circle bgColor = {colors[ranNum]} />
+          circles.push(<Circle bgColor = {colors[ranNum]} />); 
+
+          return circles[0];
         };
+
+
+
 
     ReactDOM.render(<div>{showCircle()}</div>,document.querySelector("#container"));
     </script>
