@@ -19,7 +19,27 @@
 
     <script type="text/babel">
 
-    ReactDOM.render(,document.querySelector("#container"));
+    class CounterParent extends React.Component{
+
+      render(){
+          var counterParentStyle = {
+             backgroundColor: "yellow",
+             width: 250,
+             height: 200,
+             WebkitFilter: "opacity(75%)",
+             filter: "opacity(75%)",
+             borderRadius: 20,
+             border: "1px solid blue"
+              }
+
+        return(
+           <div style={counterParentStyle} >
+           </div>
+        );
+      }
+    };
+
+    ReactDOM.render(<CounterParent />,document.querySelector("#container"));
 
     </script>
 
