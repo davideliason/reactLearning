@@ -15,6 +15,18 @@
     <script type="text/babel">
 
     class Library extends React.Component{
+      constructor(props){
+        super(props);
+        this.state = {
+          books : [
+            {title: "2001",
+             author: "clarke"},
+             {title : "blue mountain",
+              author: "robinson"}
+          ]
+        }
+      };
+
       render(){
 
         var libraryStyle = {
@@ -54,10 +66,31 @@
                 <p style={textStyles.emphasis} >{this.props.title}</p>
                 <p style={textStyles.subtle }>Books</p>
                </div>
+               <Book title={this.state.books[0].title} />
+               <Book />
             </div>
          );
       }
     }
+
+    class Book extends React.Component {
+      render(){
+          var bookStyle = {
+             backgroundColor: "blue",
+             width: 75,
+             border: "1px solid white",
+             display: "inline-block",
+             margin: 20,
+             textAlign: "center"
+          };
+
+        return(
+          <div style={bookStyle} >
+             <p> {this.props.title}</p>
+          </div>
+        );
+      }
+    };
 
    
 
