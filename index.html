@@ -14,57 +14,22 @@
 
     <script type="text/babel">
 
-
-      class Card extends React.Component {
-         render(){
-           var cardStyle = {
-              width: 200,
-              height: 400,
-              marginLeft: 200,
-              border: "5px solid black",
-              WebkitFilter: "drop-shadow(4px 4px 20px blue)"
-           };
-           return (
-             <div style={cardStyle} >
-                <Square color={this.props.color}></Square>
-                <Label color={this.props.color}></Label>
-             </div>
-           );
-         }
-      }
-
-      class Square extends React.Component{
-         render(){
-            var squareStyle = {
-               backgroundColor: this.props.color,
-               height: 300
-            };
-
-            return (
-              <div style={squareStyle}>
-              </div>
-            );
-         }
-      }
-
-      class Label extends React.Component {
-        render(){
-          var labelStyle = {
-             height: 100,
-             textAlign: "center",
-             fontSize: 20
+    class Library extends React.Component {
+       render(){
+          var libraryStyle = {
+            backgroundColor: this.props.bgcolor
           };
-
-          return (
-            <div style={labelStyle}>
-               <p> {this.props.color} </p>
+          return(
+            <div style= {libraryStyle} >
+               <h3>Library</h3>
             </div>
           );
-        }
-      }
+       }
+    }
 
-      ReactDOM.render(<Card color="red"></Card>, document.querySelector('#container'));
+    ReactDOM.render(<Library bgcolor="yellow"></Library>,document.querySelector("#container"));
     </script>
 
   </body>
 </html>
+
