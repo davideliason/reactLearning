@@ -42,7 +42,6 @@
 
        return(
          <div>
-            <p >hello world</p>
             <p style={coffeeCounterStyle} ># {this.state.number}</p>
          </div>
         );
@@ -75,19 +74,24 @@
 
           var textStyles = {
             emphasis: {
-              fontSize: 16
+              fontSize: 16,
+              backgroundColor: "red",
+              ...commonStyle
             },
             smallEmphasis : {
-              fontSize: 12
+              fontSize: 12,
+              ...commonStyle
             },
             small : {
-              fontSize: 8
+              fontSize: 8,
+              ...commonStyle
             }
           };
 
        return(
          <div style={coffeeCounterStyle} >
             <div style={divStyle}>
+              <p style={textStyles.emphasis}>behold</p>
               <CoffeeCounter />
             </div>
          </div>
