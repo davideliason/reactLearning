@@ -29,11 +29,18 @@
              WebkitFilter: "opacity(75%)",
              filter: "opacity(75%)",
              borderRadius: 20,
-             border: "1px solid blue"
-              }
+             border: "1px solid blue",
+             textAlign: "center"
+              };
+          var buttonStyle = {
+             backgroundColor : "blue",
+             width: 50,
+             height: 30
+          }
 
         return(
            <div style={counterParentStyle} >
+              <button style={buttonStyle}>click</button>
            </div>
         );
       }
