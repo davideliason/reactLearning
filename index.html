@@ -13,39 +13,9 @@
     <div id="container"></div>
 
     <script type="text/babel">
+   
 
-    class Library extends React.Component {
-       render(){
-          var libraryStyle = {
-            backgroundColor: this.props.bgcolor,
-            width: 200,
-            height: 200,
-            border: "2px solid black",
-            marginLeft: 20,
-            padding: 50,
-            fontFamily: "verdana",
-            WebkitFilter: "drop-shadow(16px 16px 16px blue) opacity(25%)"
-          };
-
-          return(
-            <div style= {libraryStyle} >
-               <Book {...this.props}></Book>
-            </div>
-          );
-       }
-    }
-
-    class Book extends React.Component{
-      render(){
-        return(
-          <div>
-            <p>Book {this.props.bgcolor} </p>
-          </div>
-        );
-      }
-    }
-
-    ReactDOM.render(<Library bgcolor="yellow"></Library>,document.querySelector("#container"));
+    ReactDOM.render(,document.querySelector("#container"));
     </script>
 
   </body>
