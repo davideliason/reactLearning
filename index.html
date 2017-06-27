@@ -41,7 +41,7 @@
            count : 0
         }
       }
-      
+
       render(){
           var counterParentStyle = {
              backgroundColor: "yellow",
@@ -62,7 +62,7 @@
         return(
            <div style={counterParentStyle} >
               <Counter count={3} />
-              <button style={buttonStyle}>click</button>
+              <button onClick={this.increase} style={buttonStyle}>+</button>
            </div>
         );
       }
