@@ -20,6 +20,10 @@
     <script type="text/babel">
 
         class Circle extends React.Component{
+          constructor(props){
+            super(props);
+          };
+
           render(){
 
             var circleStyle = {
@@ -31,21 +35,17 @@
               width: 100,
               height: 100
             }
+
+
             return(
-              <div style={circleStyle} >
+              <div style={circleStyle} >.
               </div>
             );
           }
         };
 
-        function showCircle(){
-          var colors = ["blue","green","red","orange"];
-          var ranNum = Math.floor(Math.random() * colors.length);
 
-          return <Circle bgColor = {colors[ranNum]} />
-        };
-
-    ReactDOM.render(<div>{showCircle()}</div>,document.querySelector("#container"));
+    ReactDOM.render(<div><Circle bgColor="yellow" /></div>,document.querySelector("#container"));
     </script>
 
   </body>
