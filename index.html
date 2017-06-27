@@ -19,50 +19,7 @@
 
     <script type="text/babel">
 
-        class Circle extends React.Component{
-          constructor(props){
-            super(props);
-          };
-
-          render(){
-
-            var circleStyle = {
-              padding: 10,
-              margin: 20,
-              display: "inline-block",
-              backgroundColor: this.props.bgColor,
-              borderRadius: "50%",
-              width: 100,
-              height: 100
-            }
-
-
-            return(
-              <div style={circleStyle} >.
-              </div>
-            );
-          }
-        };
-
-        var circles = [];
-
-
-        function showCircle(){
-
-          var colors = ["blue","green","red","orange"];
-          for(var i = 0; i < colors.length; i++){
-             var color = colors[i];
-             console.log("color" + color)
-             circles.push(<Circle key = {i + color} bgColor = {color} />); 
-          }
-
-          var ranNum = Math.floor(Math.random() * circles.length);
-
-          return circles[ranNum];
-        };
-
-
-    ReactDOM.render(<div>{showCircle()}</div>,document.querySelector("#container"));
+    ReactDOM.render(,document.querySelector("#container"));
 
     </script>
 
