@@ -18,18 +18,29 @@
       class Card extends React.Component {
          render(){
            var cardStyle = {
-              backgroundColor : "blue",
-              color: "yellow",
-              fontSize: 20,
               width: 200,
               height: 400,
-              textAlign: "center",
               marginLeft: 200
            };
            return (
              <div style={cardStyle} >
+                <Square></Square>
              </div>
            );
+         }
+      }
+
+      class Square extends React.Component{
+         render(){
+            var squareStyle = {
+               backgroundColor: "blue",
+               height: 200
+            };
+
+            return (
+              <div style={squareStyle}>
+              </div>
+            );
          }
       }
 
