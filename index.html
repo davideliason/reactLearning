@@ -19,6 +19,20 @@
 
     <script type="text/babel">
 
+    class Counter extends React.Component{
+       render(){
+          var counterStyle = {
+            fontSize : 40,
+            marginTop: 50
+          };
+         return(
+          <div style={counterStyle} >
+              {this.props.count}
+          </div>
+         );
+       }
+    };
+
     class CounterParent extends React.Component{
 
       render(){
@@ -40,6 +54,7 @@
 
         return(
            <div style={counterParentStyle} >
+              <Counter count={3} />
               <button style={buttonStyle}>click</button>
            </div>
         );
