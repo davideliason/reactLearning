@@ -20,11 +20,13 @@
            var cardStyle = {
               width: 200,
               height: 400,
-              marginLeft: 200
+              marginLeft: 200,
+              border: "5px solid black"
            };
            return (
              <div style={cardStyle} >
-                <Square></Square>
+                <Square color={this.props.color}></Square>
+                <Label color={this.props.color}></Label>
              </div>
            );
          }
@@ -33,8 +35,8 @@
       class Square extends React.Component{
          render(){
             var squareStyle = {
-               backgroundColor: "blue",
-               height: 200
+               backgroundColor: this.props.color,
+               height: 300
             };
 
             return (
@@ -44,7 +46,23 @@
          }
       }
 
-      ReactDOM.render(<Card color="#FF6663"></Card>, document.querySelector('#container'));
+      class Label extends React.Component {
+        render(){
+          var labelStyle = {
+             height: 100,
+             textAlign: "center",
+             fontSize: 20
+          };
+
+          return (
+            <div style={labelStyle}>
+               <p> {this.props.color} </p>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Card color="red"></Card>, document.querySelector('#container'));
     </script>
 
   </body>
