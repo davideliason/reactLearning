@@ -13,9 +13,29 @@
     <div id="container"></div>
 
     <script type="text/babel">
+
+    class CoffeeCounter extends React.Component {
+       render(){
+          var coffeeCounterStyle = {
+            backgroundColor: "yellow",
+            width: 100,
+            height: 200,
+            WebkitFilter: "opacity(30%)",
+            filter: "opacity(30%)",
+            textAlign: "center",
+            margin: 50,
+            padding: 20
+          };
+       return(
+         <div style={coffeeCounterStyle} >
+            <p>hello</p>
+         </div>
+        );
+      };
+    }
    
 
-    ReactDOM.render(,document.querySelector("#container"));
+    ReactDOM.render(<CoffeeCounter></CoffeeCounter>,document.querySelector("#container"));
     </script>
 
   </body>
