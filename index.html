@@ -21,10 +21,20 @@
           };
           return(
             <div style= {libraryStyle} >
-               <h3>Library</h3>
+               <Book {...this.props}></Book>
             </div>
           );
        }
+    }
+
+    class Book extends React.Component{
+      render(){
+        return(
+          <div>
+            <p>Book {this.props.bgcolor} </p>
+          </div>
+        );
+      }
     }
 
     ReactDOM.render(<Library bgcolor="yellow"></Library>,document.querySelector("#container"));
