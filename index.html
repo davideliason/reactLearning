@@ -38,7 +38,14 @@
           }
         };
 
-    ReactDOM.render(<Circle bgColor="yellow" />,document.querySelector("#container"));
+        function showCircle(){
+          var colors = ["blue","green","red","orange"];
+          var ranNum = Math.floor(Math.random() * colors.length);
+
+          return <Circle bgColor = {colors[ranNum]} />
+        };
+
+    ReactDOM.render(<div>{showCircle()}</div>,document.querySelector("#container"));
     </script>
 
   </body>
