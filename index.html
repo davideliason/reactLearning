@@ -16,6 +16,17 @@
 
     class CoffeeCounter extends React.Component {
        render(){
+
+       return(
+         <div>
+            <p>hello world</p>
+         </div>
+        );
+       }
+    }
+
+    class CoffeeCounterDisplay extends React.Component {
+       render(){
           var coffeeCounterStyle = {
             backgroundColor: "yellow",
             width: 100,
@@ -28,14 +39,14 @@
           };
        return(
          <div style={coffeeCounterStyle} >
-            <p>hello</p>
+            <CoffeeCounter />
          </div>
         );
       };
     }
    
 
-    ReactDOM.render(<CoffeeCounter></CoffeeCounter>,document.querySelector("#container"));
+    ReactDOM.render(<CoffeeCounterDisplay></CoffeeCounterDisplay>,document.querySelector("#container"));
     </script>
 
   </body>
