@@ -20,16 +20,25 @@
        class Counter extends React.Component{
          render(){
             var counterStyle = {
-              backgroundColor : "yellow"
+              backgroundColor : "yellow",
             };
             return(
               <div style={counterStyle}>
+                {this.props.count}
               </div>
             );
          }
        };
+
+       class CounterParent extends React.Component {
+         render(){
+           return(
+
+           );
+         }
+       };
        
-       ReactDOM.render(<Counter />,document.querySelector('#container'));
+       ReactDOM.render(<Counter count={3} />,document.querySelector('#container'));
      </script>
   </body>
 </html>
