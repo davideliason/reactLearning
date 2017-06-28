@@ -31,14 +31,29 @@
        };
 
        class CounterParent extends React.Component {
-         render(){
-           return(
+         constructor(props){
+             super(props);
+             this.state = {
+               count : 0
+             }
+             this.clickIncrease = this.clickIncrease.bind(this);
+           }
 
+         render(){
+           var counterParentStyle = {
+              backgroundColor: "blue",
+              textAlign: "center"
+           };
+
+           return(
+             <div style={counterParentStyle} >
+                <Counter count = {this.state.count} />
+             </div>
            );
          }
        };
        
-       ReactDOM.render(<Counter count={3} />,document.querySelector('#container'));
+       ReactDOM.render(<CounterParent />,document.querySelector('#container'));
      </script>
   </body>
 </html>
