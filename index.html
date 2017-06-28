@@ -9,6 +9,7 @@
     <style>
        #container {
          width: 300px;
+         margin-left: 50px;
        }
     </style>
    </head>
@@ -39,15 +40,33 @@
              this.clickIncrease = this.clickIncrease.bind(this);
            }
 
+           clickIncrease(e){
+               e.preventDefault();
+               this.setState({
+               count : this.state.count + 1
+             });
+           };
+
          render(){
            var counterParentStyle = {
               backgroundColor: "blue",
               textAlign: "center"
            };
 
+           var buttonStyle = {
+              backgroundColor: "green",
+              width: 50,
+              height: 20,
+              borderRadius: 20
+           }
+
+           
+
+
            return(
              <div style={counterParentStyle} >
                 <Counter count = {this.state.count} />
+                <button onClick = {this.clickIncrease}>+</button>
              </div>
            );
          }
