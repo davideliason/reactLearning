@@ -22,6 +22,9 @@
          render(){
             var counterStyle = {
               backgroundColor : "yellow",
+              marginTop: 50,
+              paddingTop: 25,
+              height: 50
             };
             return(
               <div style={counterStyle}>
@@ -42,22 +45,37 @@
 
            clickIncrease(e){
                e.preventDefault();
+
+               var currentCount = this.state.count;
+
+               if(e.shiftKey){
+                 currentCount += 20;
+               }
+               else{
+                 currentCount += 1;
+               }
+               
                this.setState({
-               count : this.state.count + 1
+               count : currentCount
              });
            };
 
          render(){
            var counterParentStyle = {
               backgroundColor: "blue",
-              textAlign: "center"
+              textAlign: "center",
+              width: 200,
+              height: 250,
+              border: "1px solid black"
+
            };
 
            var buttonStyle = {
               backgroundColor: "green",
-              width: 50,
+              width: 20,
               height: 20,
-              borderRadius: 20
+              borderRadius: 20,
+              paddingTop: 30
            }
 
            
