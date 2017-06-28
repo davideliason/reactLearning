@@ -16,8 +16,20 @@
      <div id="container">
 
      <script type="text/babel">
+
+       class Counter extends React.Component{
+         render(){
+            var counterStyle = {
+              backgroundColor : "yellow"
+            };
+            return(
+              <div style={counterStyle}>
+              </div>
+            );
+         }
+       };
        
-       ReactDOM.render(,document.querySelector('#container'));
+       ReactDOM.render(<Counter />,document.querySelector('#container'));
      </script>
   </body>
 </html>
